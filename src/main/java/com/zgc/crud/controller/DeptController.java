@@ -26,8 +26,10 @@ public class DeptController {
     @ResponseBody
     public Msg getDepts() {
         //查询
-        List<Department> depts = deptService.getDepts();
         System.out.println("查询");
+        List<Department> depts = deptService.getDepts();
+
+        System.out.println("查询完毕");
         return Msg.success().add("depts",depts);
     }
 }
