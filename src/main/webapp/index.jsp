@@ -215,7 +215,7 @@
             var checkBoxTd = $("<td><input type='checkbox' class='check_item'/></td>");
             var empIdTd = $("<td></td>").append(item.empId);
             var empNameTd = $("<td></td>").append(item.empName);
-            var genderTd = $("<td></td>").append(item.gender=='M'?"男":"女");
+            var genderTd = $("<td></td>").append(item.gender);
             var emailTd = $("<td></td>").append(item.email);
             var deptNameTd = $("<td></td>").append(item.department.deptName);
             /**
