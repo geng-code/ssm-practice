@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?><!--xml版本 以及编码-->
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd"><!-- 约束 -->
+<configuration>
+
+    <!--
+        MyBatis核心配置文件中，标签的顺序：
+        properties?,settings?,typeAliases?,typeHandlers?,
+        objectFactory?,objectWrapperFactory?,reflectorFactory?,
+        plugins?,environments?,databaseIdProvider?,mappers?
+    -->
+
+    <!--数据库字段和bean对象属性适配-->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <!--类型别名-->
+    <typeAliases>
+        <package name="com.zgc.crud.bean"/>
+    </typeAliases>
+
+    <!--分页插件-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+                <property name="reasonable" value="true"/>
+        </plugin>
+
+    </plugins>
+
+    <!--引入Mybatis映射文件-->
+    <mappers>
+        <package name="com.zgc.crud.dao"/>
+    </mappers>
+</configuration>
