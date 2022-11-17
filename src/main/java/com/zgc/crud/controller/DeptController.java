@@ -25,7 +25,7 @@ public class DeptController {
     @RequestMapping("/depts")
     @ResponseBody
     public Msg getDepts() {
-        Sytem.out.println("pull test");
+        System.out.println("pull test");
         List<Department> depts = deptService.getDepts();
         return Msg.success().add("depts",depts);
     }
