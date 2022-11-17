@@ -28,8 +28,8 @@ public class DeptController {
         //查询
         System.out.println("查询");
         List<Department> depts = deptService.getDepts();
-
         System.out.println("查询完毕");
+        System.out.println("hot-fix test commit");
         return Msg.success().add("depts",depts);
     }
 }
